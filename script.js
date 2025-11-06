@@ -17,8 +17,6 @@ const loadImages = (url) => {
       }
     })
     .then((data) => {
-      console.log(data)
-
       const cards = document.querySelectorAll(".card")
 
       cards.forEach((card, i) => {
@@ -26,7 +24,7 @@ const loadImages = (url) => {
         img.src = data.photos[i].src.tiny
 
         const idText = card.querySelector(".text-muted")
-        idText.textContent = data.photos[i].id
+        idText.innerText = data.photos[i].id
       })
     })
     .catch((err) => console.log(err))
@@ -54,7 +52,7 @@ const searchInput = document.getElementById("searchInput")
 searchBtn.addEventListener("click", () => {
   const query = searchInput.value
 
-  fetch(`https://api.pexels.com/v1/search?query=${query}&per_page=9`, {
+  fetch(`https://api.pexels.com/v1/search?query=${query}`, {
     headers: {
       Authorization: API_KEY,
     },
@@ -71,7 +69,7 @@ searchBtn.addEventListener("click", () => {
 
       cards.forEach((card, i) => {
         const img = card.querySelector(".card-img-top")
-        img.src = data.photos[i].src.medium
+        img.src = data.photos[i].src.tiny
 
         const idText = card.querySelector(".text-muted")
         idText.innerText = data.photos[i].id
