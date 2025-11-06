@@ -17,11 +17,13 @@ const loadImages = (url) => {
       }
     })
     .then((data) => {
+      console.log(data)
+
       const cards = document.querySelectorAll(".card")
 
       cards.forEach((card, i) => {
         const img = card.querySelector(".card-img-top")
-        img.src = data.photos[i].src.medium
+        img.src = data.photos[i].src.tiny
 
         const idText = card.querySelector(".text-muted")
         idText.textContent = data.photos[i].id
