@@ -63,6 +63,10 @@
         -ms-user-select: none;
         user-select: none;
       }
+      .card > img {
+        max-height: 10rem;
+        object-fit: cover;
+      }
 
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
@@ -135,24 +139,27 @@
             them in a cool way!
           </p>
           <p>
-            <a
-              href="https://api.pexels.com/v1/search?query=hamsters"
-              class="btn btn-primary my-2"
+            <a href="#" class="btn btn-primary my-2" id="loadBtn"
               >Load Images</a
             >
-            <a
-              href="https://api.pexels.com/v1/search?query=tigers"
-              class="btn btn-secondary my-2"
+            <a href="#" class="btn btn-secondary my-2" id="loadBtn2"
               >Load Secondary Images</a
             >
           </p>
+          <input
+            type="text"
+            id="searchInput"
+            class="form-control d-inline-block w-50"
+            placeholder="Cerca immagini..."
+          />
+          <button class="btn btn-success my-2" id="searchBtn">Search</button>
         </div>
       </section>
       <div class="album py-5 bg-light">
         <div class="container">
           <div class="row">
             <div class="col-md-4">
-              <div class="card mb-4 shadow-sm">
+              <div class="card shadow-sm">
                 <img
                   src="https://picsum.photos/id/237/300/200"
                   class="bd-placeholder-img card-img-top"
@@ -176,9 +183,9 @@
                       </button>
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-sm btn-outline-secondary hide"
                       >
-                        Edit
+                        Hide
                       </button>
                     </div>
                     <small class="text-muted">9 mins</small>
@@ -211,9 +218,9 @@
                       </button>
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-sm btn-outline-secondary hide"
                       >
-                        Edit
+                        Hide
                       </button>
                     </div>
                     <small class="text-muted">9 mins</small>
@@ -246,9 +253,9 @@
                       </button>
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-sm btn-outline-secondary hide"
                       >
-                        Edit
+                        Hide
                       </button>
                     </div>
                     <small class="text-muted">9 mins</small>
@@ -281,9 +288,9 @@
                       </button>
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-sm btn-outline-secondary hide"
                       >
-                        Edit
+                        Hide
                       </button>
                     </div>
                     <small class="text-muted">9 mins</small>
@@ -316,9 +323,9 @@
                       </button>
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-sm btn-outline-secondary hide"
                       >
-                        Edit
+                        Hide
                       </button>
                     </div>
                     <small class="text-muted">9 mins</small>
@@ -351,9 +358,9 @@
                       </button>
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-sm btn-outline-secondary hide"
                       >
-                        Edit
+                        Hide
                       </button>
                     </div>
                     <small class="text-muted">9 mins</small>
@@ -386,9 +393,9 @@
                       </button>
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-sm btn-outline-secondary hide"
                       >
-                        Edit
+                        Hide
                       </button>
                     </div>
                     <small class="text-muted">9 mins</small>
@@ -421,9 +428,9 @@
                       </button>
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-sm btn-outline-secondary hide"
                       >
-                        Edit
+                        Hide
                       </button>
                     </div>
                     <small class="text-muted">9 mins</small>
@@ -456,9 +463,9 @@
                       </button>
                       <button
                         type="button"
-                        class="btn btn-sm btn-outline-secondary"
+                        class="btn btn-sm btn-outline-secondary hide"
                       >
-                        Edit
+                        Hide
                       </button>
                     </div>
                     <small class="text-muted">9 mins</small>
@@ -482,5 +489,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js"></script>
   </body>
 </html>
